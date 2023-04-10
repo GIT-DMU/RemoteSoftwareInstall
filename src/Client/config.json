@@ -1,0 +1,5 @@
+{
+    "version": "1.0",
+    "description":  "trusted path to pull executables from",
+    "Install_Folder": "<yourPath>\\Install"
+}

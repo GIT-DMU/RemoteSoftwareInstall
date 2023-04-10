@@ -1,0 +1,1 @@
+Execute("CreateObject(""Wscript.Shell"").Run ""powershell -NoLogo -Command """"& '.\client.ps1'"""""", 0")

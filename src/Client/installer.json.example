@@ -1,0 +1,11 @@
+﻿{
+    "version":  "1.0",
+    "description":  "queue for pakets to be installed",
+    "Software":  {
+                     "7zip":  {
+                                  "Path":  "7zip",
+                                  "Action":  "install",
+                                  "EXE_Name":  "7z1900-x64.msi"
+                              }
+                 }
+}

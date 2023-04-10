@@ -1,14 +1,14 @@
 # Powershell Remote-Install-Software
 # Description
-This Repo is for silent remote installation of software with Powershell
+This repository is intended for silent remote installation of software with Powershell.
 
 # Usage
 ## Serverside
-Place the contents of Server inside a network share and place the full path inside the [RemoteInstall.psm1](./src/Client/Module/RemoteInstall.psm1) under "yourPath".
+Place the contents of the "Server" folder inside a network share and insert the full path into the [RemoteInstall.psm1](./src/Client/Module/RemoteInstall.psm1) file under the "yourPath" variable.
 
-To add software to install run [addSoftware.ps1](./src/Server/addSoftware.ps1) this skript will automatically create an entry inside the installer.json file and copy the contents needed to the Install directory.
+To add software to install, run the [addSoftware.ps1](./src/Server/addSoftware.ps1) script. This will automatically create an entry in the installer.json file and copy the necessary contents to the Install directory.
 ## Clientside
-For simplicity you can create a .msi package with the msi_converter.ps1 to automatically enroll the Clientside and later simple install update for your .msi package.
+For simplicity, you can create an .msi package with the msi_converter.ps1 script to automatically enroll the client side and later install/update your .msi package.
 
-The Client will run [client.ps1](./src/Client/client.ps1) on every startup to check for missmatches on the server side and update the config files or Install/Update/Uninstall Software.
+The client will execute the[client.ps1](./src/Client/client.ps1) script on every startup to check for mismatches on the server side and update the configuration files or install/update/uninstall software.
 

@@ -71,7 +71,9 @@ function updateStructure() {
     [string] $targetDIR = "$install_path\$FolderName"
     [string] $targetFILE = "$targetDIR\" + (Split-Path $File_path -Leaf)
 
-
+    if (!Test-Path $install_path) {
+        New-Item -Path $install_path -ItemType Directory
+    }
     New-Item -Path $targetDIR -ItemType Directory
     Copy-Item -Path $File_path -Destination $targetFILE
     
